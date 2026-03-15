@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Email Sent</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#56ab2f,#a8e063);
+        }
+
+        .box{
+            background:white;
+            padding:50px 60px;
+            border-radius:12px;
+            text-align:center;
+            box-shadow:0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:#28a745;
+            margin-bottom:20px;
+        }
+
+        p{
+            color:#555;
+            margin-bottom:25px;
+        }
+
+        .btn{
+            text-decoration:none;
+            padding:10px 25px;
+            background:#28a745;
+            color:white;
+            border-radius:6px;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#1e7e34;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>✔ Email Sent Successfully</h1>
+
+        <p>Your message has been delivered.</p>
+
+        <a href="{% url 'home' %}" class="btn">Back to Home</a>
+
+    </div>
+
+</body>
+
+</html>

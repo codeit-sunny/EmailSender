@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mail Sender</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: linear-gradient(135deg,#667eea,#764ba2);
+        }
+
+        .form-box{
+            background:white;
+            padding:35px 40px;
+            width:400px;
+            border-radius:12px;
+            box-shadow:0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .form-box h2{
+            text-align:center;
+            margin-bottom:25px;
+            color:#333;
+        }
+
+        form p{
+            margin-bottom:15px;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:10px 12px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            font-size:14px;
+            transition:0.3s;
+        }
+
+        input:focus, textarea:focus{
+            border-color:#667eea;
+            outline:none;
+            box-shadow:0 0 5px rgba(102,126,234,0.4);
+        }
+
+        textarea{
+            resize:none;
+            height:100px;
+        }
+
+        input[type="submit"]{
+            background:#667eea;
+            color:white;
+            border:none;
+            padding:12px;
+            font-size:16px;
+            border-radius:6px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        input[type="submit"]:hover{
+            background:#5563d6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h2>Contact Form</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Send Message">
+        </form>
+
+    </div>
+
+</body>
+
+</html>
